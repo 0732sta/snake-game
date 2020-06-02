@@ -195,9 +195,7 @@
 	<script src="script.js"></script>
 </body>
 <script>
-/* ===================================*/
-/* ========== DOM elements ===========*/
-/* ===================================*/
+/*  DOM elements */
 
 let root     = document.querySelector('#root'),
 	sc       = document.querySelector('#score'),
@@ -209,9 +207,7 @@ let root     = document.querySelector('#root'),
 	win     = document.querySelector('.win');
 
 
-/* ===================================*/
-/* ============ Variables ============*/
-/* ===================================*/
+/* Variables */
 
 let direction = [0, 1],
 	snake = [{ x:3, y:3 }],
@@ -232,9 +228,7 @@ let direction = [0, 1],
 	level = 0;
 
 
-/* ===================================*/
-/* ============= Update ==============*/
-/* ===================================*/
+/*  Update */
 
 function update(){
 
@@ -273,9 +267,7 @@ function update(){
 }
 
 
-/* ===================================*/
-/* ============== Render =============*/
-/* ===================================*/
+/*  Render */
 
 function render(){
 	for(var i = 0; i < snake.length; i++){
@@ -289,9 +281,7 @@ function render(){
 }
 
 
-/* ===================================*/
-/* ============ Game loop ============*/
-/* ===================================*/
+/*  Game loop */
 
 function run(){
 	if(pause == false){
@@ -308,9 +298,7 @@ function run(){
 };
 
 
-/* ===================================*/
-/* ============== State ==============*/
-/* ===================================*/
+/*  State */
 
 function running(){
 	if(pause == true){
@@ -330,11 +318,9 @@ function gameOver(){
 }
 
 
-/* ===================================*/
 /* ============== Init ===============*/
-/* ===================================*/
 
-/* ========== Create table ===========*/
+/*  Create table */
 
 function createTable() {
 	let table = document.createElement('table');
@@ -353,7 +339,7 @@ let t = document.querySelector('.mytable');
 
 
 
-/* =============== Eat ===============*/
+/*  Eat */
 
 function createEat(){
 	eat[0] = Math.floor(Math.random() * 19);
@@ -362,7 +348,7 @@ function createEat(){
 }
 
 
-/* =========== Controller ============*/
+/*  Controller */
 
 let keyListener = function(e) {
 	if(start == false){
@@ -385,7 +371,7 @@ newGame.addEventListener("click", startNewGame);
 
 
 
-/* ============= Run ===============*/
+/*  Run */
 
 function startNewGame(){
 	overload.style.display = 'none';
